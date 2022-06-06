@@ -46,4 +46,24 @@ spec:
             resources:
               requests:
                 storage: 1Gi
+                
+                
+                
+                
+kubectl exec -n postgres-operator -it hippo-instance1-4zkj-0 /bin/bash
+
+psql postgresql://hippo:%3A7o;IoNY;%286Vg7cB=%40z%40sZJ%3E@hippo-primary.default.svc:5432/hippo
+
+
+create user user_name with encrypted password 'mypassword';
+
+CREATE DATABASE testdb
+
+\c testdb
+
+CREATE TABLE phonebook(phone VARCHAR(32), firstname VARCHAR(32), lastname VARCHAR(32), address VARCHAR(64));
+
+INSERT INTO phonebook(phone, firstname, lastname, address) VALUES('+1 123 456 7890', 'John', 'Doe', 'North America');
+
+SELECT * FROM phonebook ORDER BY lastname;
 ```
